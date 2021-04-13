@@ -95,9 +95,10 @@ input{vertical-align:middle; outline:none;}
 :-ms-input-placeholder{  /* Internet Explorer 10-11 */
     color:#c7c9cd;
 }
-textarea:focus,input[type='text']:focus{box-shadow: 0px 0px 6px #8FC2F6;}
-textarea:hover,input[type='text']:hover{box-shadow: 0px 0px 6px #8FC2F6;}
-
+/*textarea:focus,input[type='text']:focus{box-shadow: 0px 0px 6px #8FC2F6;}*/
+/*textarea:hover,input[type='text']:hover{box-shadow: 0px 0px 6px #8FC2F6;}*/
+input[type="button"]:hover {  cursor: pointer;  }
+div:focus {  outline: none;  }
 
 
 /*滚动条美化*/
