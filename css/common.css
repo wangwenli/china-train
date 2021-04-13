@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 导航区域 */
+.gh-root-box .gh-header{position: relative;height: 64px;}
+.gh-root-box .gh-left{position: fixed;width: 192px;left: 0;top: 64px;overflow-x: hidden;bottom: 0;}
+.gh-left .gh-left-center{width: 210px;height: 100%;overflow-x: hidden;position: relative;}
+.gh-root-box .gh-body{position: absolute;left: 192px;right: 0;top: 64px;bottom: 0;width: auto;overflow-y: auto;}
+.gh-root-box .gh-body .gh-iframe{width: 100%;height: 100%;position: absolute;top: 0;left: 0;right:0;background: #F6F7F9;}
