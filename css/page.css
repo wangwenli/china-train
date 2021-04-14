@@ -1,0 +1,133 @@
+.page-list {
+    width: 100%;
+    height: 32px;
+    text-align: left;
+    padding-top: 16px;
+    padding-bottom: 50px;
+}
+.page-list .ht-page {
+    text-align: left;
+}
+.page-list .ht-page span {
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    background-color: rgba(255,255,255,1);
+    border-radius: 5px;
+    margin: 0 4px;
+}
+.page-list .ht-page a {
+    text-decoration: none;
+    outline: none;
+    color: rgba(25, 59, 104, 0.8);
+    font-size: 12px;
+}
+.page-list .ht-page .pagebtn {
+    width: 52px;
+    height: 32px;
+    background: #1875f0;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+.page-list .ht-page .pagebtn:hover {
+    background: #1875f0;
+}
+.page-list .ht-page .previous {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    background: #fff url(../images/left-icon.png) no-repeat center;
+}
+.page-list .ht-page .previous a {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 5px;
+}
+.page-list .ht-page .previous.disable {
+    display: inline-block;
+    cursor: not-allowed;
+    color: #cccccc;
+}
+.page-list .ht-page .next {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    border-left: 0;
+    background: #fff url(../images/right-icon.png) no-repeat center;
+}
+.page-list .ht-page .next.disable {
+    display: inline-block;
+    color: #cccccc;
+    cursor: not-allowed;
+}
+.page-list .ht-page .next a {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 5px;
+    color: #808080;
+}
+.page-list .ht-page .num {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+}
+.page-list .ht-page .num.current {
+    background-color: #FFEFEF;
+    color: #FF5252;
+}
+.page-list .ht-page .num a {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 5px;
+    color: #808080;
+}
+.page-list .ht-page .num a:hover {
+    color: #FF5252;
+}
+.page-list .ht-page .dots {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 5px;
+}
+.page-list .ht-page .page_jump {
+    margin: 0 5px;
+}
+.page-list .ht-page .last-page-jump {
+    margin: 0 32px 0 5px;
+}
+.page-list .ht-page .pageInput {
+    width: 20px;
+    height: 20px;
+    background: #f7f7f7;
+    border-radius: 2px;
+    border: 1px solid #cccccc;
+    color: #808080;
+    text-align: center;
+}
+.page-list .ht-page .total_page {
+    /*display: none;*/
+    font-size: 12px;
+    color: #242425;
+
+}
+.page-list .ht-page .curr_page {
+    /*display: none;*/
+    font-size: 12px;
+    color: #242425;
+    margin-left: 14px;
+}
+.page-list .ht-page .page_jump {
+    display: none;
+}
+.page-list .ht-page .pageInput {
+    display: none;
+}
