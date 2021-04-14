@@ -1,0 +1,306 @@
+.flex {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.z-content {
+  overflow: inherit;
+  background: #ffffff;
+  /*width: 1200px;*/
+  /*margin: 112px auto 0;*/
+}
+.z-content .z-no-data {
+  overflow: hidden;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.z-content .z-no-data img.z-data-img {
+  display: block;
+  width: 280px;
+  height: 108px;
+  margin: 0 auto 24px;
+}
+.z-content .z-no-data p {
+  font-size: 14px;
+  color: rgba(36, 36, 37, .4);
+  text-align: center;
+}
+.z-content .z-no-data .z-create-btn {
+  width: 130px;
+  height: 48px;
+  background: #FF5252;
+  box-shadow: 0px 2px 8px 0px rgba(255, 82, 82, 0.25);
+  border-radius: 6px;
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  margin: 32px auto 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+}
+.z-content .z-no-data .z-create-btn img {
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+}
+.z-content .z-table {
+  overflow: inherit;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.z-content .z-table .z-create-btn {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  width: 72px;
+  height: 36px;
+  background: #1479ff;
+  box-shadow: 0px 2px 12px 0px rgba(20, 121, 255, 0.24);
+  border-radius: 6px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 32px 0;
+  float: right;
+  cursor: pointer;
+}
+.z-content .z-table .z-create-btn img {
+  width: 15px;
+  height: 14px;
+  margin-right: 4px;
+}
+.z-content .z-table .z-table-wrap {
+  overflow: inherit;
+  border: 1px solid rgba(25, 59, 104, 0.04);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+}
+.z-content .z-table table {
+  width: 100%;
+}
+.z-content .z-table table thead tr {
+  height: 44px;
+  border-bottom: 1px solid rgba(25, 59, 104, 0.04);
+}
+.z-content .z-table table thead tr th {
+  text-align: left;
+  text-indent: 20px;
+  color: rgba(25, 59, 104, 0.4);
+}
+.z-content .z-table table thead tr th:first-child {
+  width: 204px;
+}
+.z-content .z-table table tbody tr {
+  height: 72px;
+  border-bottom: 1px solid rgba(25, 59, 104, 0.04);
+}
+.z-content .z-table table tbody tr:hover {
+  background: rgba(25, 59, 104, 0.04);
+}
+.z-content .z-table table tbody tr:last-child {
+  border-bottom: none;
+}
+.z-content .z-table table tbody tr.z-line {
+  border-bottom: 2px solid rgba(25, 59, 104, 0.8);
+}
+.z-content .z-table table tbody tr td:first-child {
+  cursor: pointer;
+}
+.z-content .z-table table tbody tr td:first-child h6 {
+  color: rgba(25, 59, 104, 0.6);
+  margin-left: 14px;
+  margin-bottom: 4px;
+}
+.z-content .z-table table tbody tr td:first-child .z-date-con {
+  margin-left: 16px;
+  position: relative;
+}
+.z-content .z-table table tbody tr td:first-child .z-date-con.active h6 {
+  display: none;
+}
+.z-content .z-table table tbody tr td:first-child .z-date-con.active .z-date {
+  position: relative;
+  width: 164px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid rgba(25, 59, 104, 0.1);
+  background: url("../images/icon-date.png") no-repeat 136px center;
+  background-size: 16px 16px;
+  background: #ffffff;
+}
+.z-content .z-table table tbody tr td:first-child .z-date-con.active .z-date:before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: -4px;
+  width: 56px;
+  height: 4px;
+  background: #ffffff;
+}
+.z-content .z-table table tbody tr td:first-child .z-date-con.active .z-date:after {
+  content: attr(data-title);
+  position: absolute;
+  top: -14px;
+  left: 8px;
+  font-size: 12px;
+  width: 56px;
+  text-align: center;
+  color: rgba(25, 59, 104, 0.6);
+  font-weight: bold;
+}
+.z-content .z-table table tbody tr td:first-child .z-date-con.clicked h6 {
+  display: none;
+}
+.z-content .z-table table tbody tr td:first-child .z-date-con.clicked .z-date {
+  position: relative;
+  width: 164px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #1479ff;
+  background: #ffffff url("../images/icon-date.png") no-repeat 136px center;
+  background-size: 16px 16px;
+}
+.z-content .z-table table tbody tr td:first-child .z-date-con.clicked .z-date:before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: -4px;
+  width: 56px;
+  height: 4px;
+  background: #ffffff;
+}
+.z-content .z-table table tbody tr td:first-child .z-date-con.clicked .z-date:after {
+  content: attr(data-title);
+  position: absolute;
+  top: -14px;
+  left: 8px;
+  font-size: 12px;
+  color: rgba(25, 59, 104, 0.6);
+  width: 56px;
+  text-align: center;
+  color: #1479FF;
+  font-weight: bold;
+}
+.z-content .z-table table tbody tr td:first-child .z-date-con.clicked .select-dropdown {
+  opacity: 1;
+  z-index: 10;
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+}
+.z-content .z-table table tbody tr td:first-child .z-date {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  font-weight: 600;
+  color: #193b68;
+}
+.z-content .z-table table tbody tr td:first-child .z-date input {
+  width: 40px;
+  height: 20px;
+  border: none;
+  outline: none;
+  text-align: center;
+  background: none;
+}
+.z-content .z-table table tbody tr td:first-child .z-date input.active {
+  background: #e9f5fe;
+  border-radius: 2px;
+  font-weight: 600;
+  color: #1479ff;
+}
+.z-content .z-table table tbody tr td:first-child .z-date input:first-child {
+  margin-left: 8px;
+}
+.z-content .z-table table tbody tr td:first-child .select-dropdown {
+  width: 166px;
+  max-height: 176px;
+  overflow: auto;
+  margin: 5px 0 0;
+  padding: 5px 0;
+  background: #ffffff;
+  box-shadow: 0px 24px 48px 0px rgba(25, 59, 104, 0.12), 0px -2px 4px 0px rgba(25, 59, 104, 0.02);
+  border-radius: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  transform: translate(0, -50px);
+  -webkit-transform: translate(0, -50px);
+  z-index: 900;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  opacity: 0;
+  z-index: -1;
+}
+.z-content .z-table table tbody tr td:first-child .select-dropdown .dropdown-list li {
+  margin: 0;
+  line-height: normal;
+  padding: 8px 16px;
+  clear: both;
+  color: #193b68;
+  font-size: 12px!important;
+  white-space: nowrap;
+  list-style: none;
+  cursor: pointer;
+}
+.z-content .z-table table tbody tr td:first-child .select-dropdown .dropdown-list li:hover,
+.z-content .z-table table tbody tr td:first-child .select-dropdown .dropdown-list li.cur {
+  background-color: rgba(25, 59, 104, 0.04);
+}
+.pu-create {
+  overflow: initial;
+}
+.pu-create .pu-con {
+  overflow: initial;
+  margin: 0 24px;
+}
+.pu-create .pu-con .pu-con-item .select-input {
+  margin-right: 20px;
+}
+.pu-create .pu-con .pu-con-item .select-input:nth-child(2n) {
+  margin-right: 0;
+}
+.pu-create .pu-con .pu-con-item .select-input i.z-icon-date {
+  background: url("../images/icon-date.png") no-repeat center;
+  background-size: 16px 16px;
+}
+.pu-create .pu-con .pu-con-item .select-input i.z-icon-txt {
+  background: none;
+  color: rgba(25, 59, 104, 0.3);
+  text-align: center;
+}
+.pu-create .pu-con .pu-con-item .select-input.clicked i.z-icon-date {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+}
+.pu-create .pu-con .pu-con-item .select-input.clicked i.z-icon-txt {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+}
+.pu-create .pu-con .pu-con-duration {
+  border-top: 2px solid rgba(25, 59, 104, 0.8);
+  clear: both;
+  padding-top: 24px;
+}
+.pu-create .pu-btn {
+  clear: both;
+}

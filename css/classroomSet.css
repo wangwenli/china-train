@@ -162,17 +162,25 @@
   text-align: center;
 }
 .z-content .table-area tbody tr td .opt .edit,
+.z-content .table-area tbody tr td .opt .set,
 .z-content .table-area tbody tr td .opt .addperson,
 .z-content .table-area tbody tr td .opt .delete {
   display: inline-block;
   width: 32px;
   height: 32px;
   position: relative;
-  background: rgba(25, 59, 104, 0.04);
+  /*background: rgba(25, 59, 104, 0.04);*/
   border-radius: 50%;
   cursor: pointer;
 }
+.z-content .table-area tbody tr td .opt .edit:hover,
+.z-content .table-area tbody tr td .opt .addperson:hover,
+.z-content .table-area tbody tr td .opt .set:hover,
+.z-content .table-area tbody tr td .opt .delete:hover{
+  background: rgba(25, 59, 104, 0.04);
+}
 .z-content .table-area tbody tr td .opt .edit img,
+.z-content .table-area tbody tr td .opt .set img,
 .z-content .table-area tbody tr td .opt .addperson img,
 .z-content .table-area tbody tr td .opt .delete img {
   width: 16px;
@@ -180,38 +188,40 @@
   display: block;
   margin: 0 auto;
   margin-top: 8px;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
+  /*-webkit-filter: grayscale(100%);*/
+  /*-moz-filter: grayscale(100%);*/
+  /*-ms-filter: grayscale(100%);*/
+  /*-o-filter: grayscale(100%);*/
+  /*filter: grayscale(100%);*/
 }
 .z-content .table-area tbody tr td .opt .edit .tip,
+.z-content .table-area tbody tr td .opt .set .tip,
 .z-content .table-area tbody tr td .opt .addperson .tip,
 .z-content .table-area tbody tr td .opt .delete .tip {
   display: none;
   position: absolute;
-  bottom: -27px;
-  left: -4px;
+  top:-30px;
+  left: -12px;
   width: 40px;
   height: 27px;
-  background: url(../images/shape.png);
+  background: url(../images/shape1.png);
   text-align: center;
   font-size: 12px;
   font-weight: 400;
   color: #ffffff;
-  line-height: 32px;
+  line-height: 24px;
 }
-.z-content .table-area tbody tr td .opt .edit:hover img,
-.z-content .table-area tbody tr td .opt .addperson:hover img,
-.z-content .table-area tbody tr td .opt .delete:hover img {
-  -webkit-filter: grayscale(0);
-  -moz-filter: grayscale(0);
-  -ms-filter: grayscale(0);
-  -o-filter: grayscale(0);
-  filter: grayscale(0);
-}
+/*.z-content .table-area tbody tr td .opt .edit:hover img,*/
+/*.z-content .table-area tbody tr td .opt .addperson:hover img,*/
+/*.z-content .table-area tbody tr td .opt .delete:hover img {*/
+/*  -webkit-filter: grayscale(0);*/
+/*  -moz-filter: grayscale(0);*/
+/*  -ms-filter: grayscale(0);*/
+/*  -o-filter: grayscale(0);*/
+/*  filter: grayscale(0);*/
+/*}*/
 .z-content .table-area tbody tr td .opt .edit:hover .tip,
+.z-content .table-area tbody tr td .opt .set:hover .tip,
 .z-content .table-area tbody tr td .opt .addperson:hover .tip,
 .z-content .table-area tbody tr td .opt .delete:hover .tip {
   display: block;
@@ -245,10 +255,10 @@
 }
 .select-input i {
   position: absolute;
-  top: 7px;
-  right: 10px;
-  width: 20px;
-  height: 20px;
+  top: 10px;
+  right: 12px;
+  width: 16px;
+  height: 16px;
   background: url(../images/icon-arrow.png) no-repeat center;
   background-size: 16px 16px;
   transition: all 0.3s;
@@ -437,3 +447,54 @@
   height: 14px;
   margin-right: 4px;
 }
+
+.z-content .term-tab .term-search {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  align-items: center;
+  width: 180px;
+  height: 36px;
+  border-radius: 6px;
+  /*border: 1px solid rgba(25, 59, 104, 0.1);*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 16px;
+  background-color: #fff;
+}
+.z-content .term-tab .term-search.z-active {
+  background: #f8f9fa;
+  box-shadow: 0 0 0 3px #e3f2fd;
+  border: 1px solid #1479ff;
+}
+.z-content .term-tab .term-search img {
+  width: 16px;
+  height: 16px;
+  margin-left: 14px;
+  margin-right: 8px;
+}
+.z-content .term-tab .term-search input {
+  width: 126px;
+  height: 26px;
+  border: none;
+  color: #193b68;
+  font-size: 12px;
+}
+.z-content .term-tab .term-search input::placeholder {
+  color: rgba(36, 36, 37, .25);
+}
+
+.w_tabpeo{}
+.w_tabpeo span{color: #242425;max-width: 210px;display: inline-block;vertical-align: middle}
+.w_tabpeo i{color: rgba(36, 36, 37, .39);font-style: normal;vertical-align: middle}
+.z-content .table-area tbody tr .twobtnTd{width: 101px}
+.z-content .table-area tbody tr .twobtnTd .opt{width: 101px}
+.table-area  tbody tr .twobtnTd .opt div{margin-left: 8px;}
+.z-content .table-area tbody tr:hover .w_tabpeo span{color: rgba(255, 82, 82, 1)}
+
+
+.z-content .table-area tbody tr .tabendtime{width: 150px}
+.z-content .table-area tbody tr .tabendtime .opt{width: 150px}
+.table-area  tbody tr .tabendtime .opt div{margin-left: 8px;}
+.z-content .table-area tbody tr:hover .tabenddate{display: none}

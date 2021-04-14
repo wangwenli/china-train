@@ -51,7 +51,7 @@
 }
 .page-list .ht-page .previous.disable {
     display: inline-block;
-    cursor: default;
+    cursor: not-allowed;
     color: #cccccc;
 }
 .page-list .ht-page .next {
@@ -63,8 +63,8 @@
 }
 .page-list .ht-page .next.disable {
     display: inline-block;
-    cursor: default;
     color: #cccccc;
+    cursor: not-allowed;
 }
 .page-list .ht-page .next a {
     display: inline-block;
