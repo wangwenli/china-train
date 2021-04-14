@@ -25,7 +25,7 @@ a{text-decoration:none;color:#333}
 .colblue{color:#09f;}
 .colpur{color:#6586FE;}
 .colccc{color:#CCC;}
-.colred{color:#F86F6F;}
+.colred{color:#FF5252;}
 .col999{color:#999;}
 .col333{color:#333;}
 .colblue:hover{opacity: 0.8;}
@@ -132,5 +132,46 @@ div:focus {  outline: none;  }
 }
 
 
-
-
+/*滑动开关*/
+.z-switch {
+    display: block;
+}
+.z-switch {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    -webkit-appearance: none;
+    /* overflow: hidden; */
+    outline: none;
+    border: none;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    width: 28px;
+    height: 8px;
+    background: rgba(36, 36, 37, .1);
+    border-radius: 100px;
+}
+.z-switch.cur {
+    background: rgba(255, 82, 82, 1);
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+}
+.z-switch.cur:before {
+    left: 13px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+}
+.z-switch:before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -4px;
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border-radius: 50%;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    z-index: 8;
+    box-shadow: 0px 2px 8px 0px rgba(25, 59, 104, 0.12);
+}

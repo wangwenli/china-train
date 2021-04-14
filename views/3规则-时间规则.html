@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>规则-时间规则</title>
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="../css/popup-common.css">
     <link rel="stylesheet" href="../css/select-common.css">
     <link rel="stylesheet" href="../css/timetableStructure.css">
@@ -16,77 +17,6 @@
         <div class="z-create-btn">
             <img src="../images/icon-add.png" alt="">
             添加规则
-        </div>
-    </div>
-    <div class="z-table" style="display: none">
-        <div class="z-create-btn"><img src="../images/icon-create.png" alt="">新建</div>
-        <div class="z-table-wrap">
-            <table>
-                <thead>
-                <tr>
-                    <th></th>
-                    <th>周一</th>
-                    <th>周二</th>
-                    <th>周三</th>
-                    <th>周四</th>
-                    <th>周五</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>
-                        <div class="z-date-con">
-                            <h6>晨读1</h6>
-                            <div class="z-date " data-title="晨读1">
-                                <input type="text" class="z-date-input z-date1" value="17:00">
-                                <i>-</i>
-                                <input type="text" class="z-date-input z-date2" value="18:00">
-                            </div>
-                        </div>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="z-date-con">
-                            <h6>第一节</h6>
-                            <div class="z-date " data-title="第一节">
-                                <input type="text" class="z-date1" value="17:00">
-                                <i>-</i>
-                                <input type="text" class="z-date2" value="18:00">
-                            </div>
-                        </div>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="z-date-con">
-                            <h6>第二节</h6>
-                            <div class="z-date " data-title="第二节">
-                                <input type="text" class="z-date1" value="17:00">
-                                <i>-</i>
-                                <input type="text" class="z-date2" value="18:00">
-                            </div>
-                        </div>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                </tbody>
-            </table>
         </div>
     </div>
 </div>
@@ -102,7 +32,7 @@
                 <div class="clearfixs fl">
                     <h3 class="w-pu_name">上午</h3>
                     <div class="select-input" data-title="" style="width: 180px;margin-right:24px;">
-                        <input type="text" class="name ckd" readonly placeholder="请选择学科"><i></i>
+                        <input type="text" class="name ckd" readonly placeholder="请选择"><i></i>
                         <div class="select-dropdown ">
                             <ul class="dropdown-list">
                                 <li>行政型</li>
@@ -118,7 +48,7 @@
                 <div class="clearfixs fl">
                     <h3 class="w-pu_name">下午</h3>
                     <div class="select-input" data-title="" style="width: 180px">
-                        <input type="text" class="name ckd" readonly placeholder="请选择学科"><i></i>
+                        <input type="text" class="name ckd" readonly placeholder="请选择"><i></i>
                         <div class="select-dropdown ">
                             <ul class="dropdown-list">
                                 <li>行政型</li>

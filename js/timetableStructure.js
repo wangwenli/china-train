@@ -28,9 +28,12 @@ $(document).ready(function () {
     $(".z-create-btn").click(function () {
         $(".marker,.pu-create").show();
     });
-
+// 点击关闭
+    $(".pu-close").click(function () {
+        $(".marker,.pu-create").hide();
+    });
     var courseData = {};
-    var classLen="";
+    var classLen = "";
     // 弹窗点击确定
     $(".pu-create .pu-btn .btn-confirm").click(function () {
         if ($('#classLen').val() == "" || Math.abs($('#classLen').val()) > 60) {
@@ -167,15 +170,15 @@ $(document).ready(function () {
                     if (courseData.morPeriod != "" && i < parseInt(courseData.morPeriod)) {
                         tbodyStr += '<td>' +
                             '<div class="z-date-con"> ' +
-                            '<h6>晨读' +(i+1)+ '</h6> ' +
-                            '<div class="z-date " data-title="晨读' + (i+1) + '"> ' +
+                            '<h6>晨读' + (i + 1) + '</h6> ' +
+                            '<div class="z-date " data-title="晨读' + (i + 1) + '"> ' +
                             '<input type="text" class="z-date-input z-date1" value="' + t.begin + '"> <i>-</i> ' +
                             '<input type="text" class="z-date-input z-date2" value="' + t.end + '"> ' +
                             '</div> ' +
                             '</div>' +
                             '</td>'
                     } else {
-                        var sectionIndex=i-courseData.morPeriod;
+                        var sectionIndex = i - courseData.morPeriod;
                         tbodyStr += '<td>' +
                             '<div class="z-date-con"> ' +
                             '<h6>' + section[sectionIndex] + '</h6> ' +
@@ -195,9 +198,9 @@ $(document).ready(function () {
             tbodyStr += '</tr>'
         });
         $(".z-table-wrap table tbody").html(tbodyStr);
-        var lineIdx1=courseData.morPeriod-1;
-        var lineIdx2=lineIdx1+parseInt(courseData.amPeriod);
-        var lineIdx3=lineIdx2+parseInt(courseData.pmPeriod);
+        var lineIdx1 = courseData.morPeriod - 1;
+        var lineIdx2 = lineIdx1 + parseInt(courseData.amPeriod);
+        var lineIdx3 = lineIdx2 + parseInt(courseData.pmPeriod);
         $(".z-table-wrap table tbody tr").eq(lineIdx1).addClass('z-line');
         $(".z-table-wrap table tbody tr").eq(lineIdx2).addClass('z-line');
         $(".z-table-wrap table tbody tr").eq(lineIdx3).addClass('z-line');
@@ -207,59 +210,61 @@ $(document).ready(function () {
     });
 
     //  编辑时间
-    $(".z-table-wrap").on('click','tbody tr .z-date-con',function (e) {
+    $(".z-table-wrap").on('click', 'tbody tr .z-date-con', function (e) {
         e.stopPropagation();
-       $(this).addClass('clicked')
+        $(this).addClass('clicked')
     });
-    $(".z-table-wrap").on('click','tbody tr .z-date-input',function () {
+    $(".z-table-wrap").on('click', 'tbody tr .z-date-input', function () {
         $(this).addClass('active').siblings().removeClass('active');
-        var thisP=$(this).parent().parent();
-       var isHasList=thisP.find('.select-dropdown').length;
-       if(isHasList==0){
-           thisP.append($("#editDate").html());
-           thisP.find('.select-dropdown').mCustomScrollbar();
-       }
+        var thisP = $(this).parent().parent();
+        var isHasList = thisP.find('.select-dropdown').length;
+        if (isHasList == 0) {
+            thisP.append($("#editDate").html());
+            thisP.find('.select-dropdown').mCustomScrollbar();
+        }
     });
 
-    $(".z-table-wrap").on('click','tbody tr .select-dropdown ul li',function (e) {
+    $(".z-table-wrap").on('click', 'tbody tr .select-dropdown ul li', function (e) {
         e.stopPropagation();
         var classLen = "00" + ":" + courseData.classLen; //课节时长
         classLen = countDown(classLen);
         var breakLen = "00" + ":" + courseData.breakLen;// 课间时长
         breakLen = countDown(breakLen);
-       var txt=$(this).text();
-       var thisP=$(this).parents('.z-date-con');
-       var isDate1=thisP.find('input.active').hasClass('z-date1');
+        var txt = $(this).text();
+        var thisP = $(this).parents('.z-date-con');
+        var isDate1 = thisP.find('input.active').hasClass('z-date1');
         thisP.find('input.active').val(txt).removeClass('active');
         thisP.removeClass('clicked').addClass('active');
-        var editCourse=$(this).parents('tr').index()+1;
+        var editCourse = $(this).parents('tr').index() + 1;
         // 时间改变后面的跟着改变
-        if(isDate1){
-            var endTime=countDown(txt)+classLen;
+        if (isDate1) {
+            var endTime = countDown(txt) + classLen;
             thisP.find(".z-date2").val(timeChangeSelect(endTime));
-            var timeLevel0=parseInt(courseData.morPeriod)?parseInt(courseData.morPeriod):0;
-            var timeLevel1=timeLevel0+parseInt(courseData.amPeriod);
-            var timeLevel2=timeLevel1+parseInt(courseData.pmPeriod);
-            var timeLevel3=timeLevel2+parseInt(courseData.nitPeriod);
-            var startTime=endTime+breakLen;
-            function editDate(editCourse,tiemLevel) {
-                for(var c=editCourse;c<tiemLevel;c++){
-                    var endTime=startTime+classLen;
-                    var timeStr1=timeChangeSelect(startTime);
-                    var timeStr2=timeChangeSelect(endTime);
+            var timeLevel0 = parseInt(courseData.morPeriod) ? parseInt(courseData.morPeriod) : 0;
+            var timeLevel1 = timeLevel0 + parseInt(courseData.amPeriod);
+            var timeLevel2 = timeLevel1 + parseInt(courseData.pmPeriod);
+            var timeLevel3 = timeLevel2 + parseInt(courseData.nitPeriod);
+            var startTime = endTime + breakLen;
+
+            function editDate(editCourse, tiemLevel) {
+                for (var c = editCourse; c < tiemLevel; c++) {
+                    var endTime = startTime + classLen;
+                    var timeStr1 = timeChangeSelect(startTime);
+                    var timeStr2 = timeChangeSelect(endTime);
                     $(".z-table-wrap tbody tr").eq(c).find(".z-date1").val(timeStr1);
                     $(".z-table-wrap tbody tr").eq(c).find(".z-date2").val(timeStr2);
-                    startTime=endTime+breakLen;
+                    startTime = endTime + breakLen;
                 }
             }
-            if(editCourse<timeLevel0){
-                editDate(editCourse,timeLevel0);
-            }else if(editCourse<timeLevel1){
-                editDate(editCourse,timeLevel1);
-            }else if(editCourse<timeLevel2){
-                editDate(editCourse,timeLevel2);
-            }else if(editCourse<timeLevel3){
-                editDate(editCourse,timeLevel3);
+
+            if (editCourse < timeLevel0) {
+                editDate(editCourse, timeLevel0);
+            } else if (editCourse < timeLevel1) {
+                editDate(editCourse, timeLevel1);
+            } else if (editCourse < timeLevel2) {
+                editDate(editCourse, timeLevel2);
+            } else if (editCourse < timeLevel3) {
+                editDate(editCourse, timeLevel3);
             }
         }
     });
@@ -279,10 +284,10 @@ $(document).ready(function () {
     function stopBubble(e) {
         //如果提供了事件对象，则这是一个非IE浏览器
         if (e && e.stopPropagation)
-        //因此它支持W3C的stopPropagation()方法
+            //因此它支持W3C的stopPropagation()方法
             e.stopPropagation();
         else
-        //否则，我们需要使用IE的方式来取消事件冒泡
+            //否则，我们需要使用IE的方式来取消事件冒泡
             window.event.cancelBubble = true;
     }
 

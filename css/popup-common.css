@@ -118,16 +118,29 @@
     margin-right: 24px;
 }
 
+.w_switchwrap {
+}
+
+.w_switchwrap .w_switchname {
+    font-size: 14px;
+    color: #242425;
+    margin-right: 6px;
+    vertical-align: middle;
+}
 
 .w-pu_name {
     font-size: 14px;
     font-weight: 600;
     color: #242425;
-    line-height: 14px;
-    margin-bottom: 12px;
+    line-height: 22px;
+    margin-bottom: 8px;
 }
+
 /*输入框*/
-.inputs{margin-bottom: 24px}
+.inputs {
+    margin-bottom: 24px
+}
+
 .inputs input {
     width: 196px;
     height: 36px;
@@ -144,12 +157,97 @@
     padding-left: 16px;
     border: 0;
     outline: 0;
+    color: #242425;
+}
+
+/*数字输入框*/
+.input-num {
+    width: 180px;
+    height: 36px;
+    color: #242425;
+    background-color: rgba(25, 59, 104, .04);
+    border: 0;
+    border-radius: 6px;
+    margin-bottom: 24px;
+}
+
+.input-num input {
+    padding: 0 16px;
+    width: 128px;
+    height: 36px;
+    color: #242425;
+    background-color: transparent;
+    border: 0;
+    border-radius: 6px;
+
+}
+
+.w_numr {
+    width: 12px;
+    padding: 3px;
+}
+
+.w_numr .w_numup {
+    background: url("../images/numup-icon.png");
+    width: 12px;
+    height: 12px;
+    display: block;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.w_numr .w_numdown {
+    background: url("../images/numdown-icon.png");
+    width: 12px;
+    height: 12px;
+    display: block;
+    cursor: pointer;
+}
+
+.input-num input::placeholder {
+    color: rgba(36, 36, 37, .25);
+}
+
+/*tab切换*/
+.w_pu_tab {
+    width: 96px;
+    height: 32px;
+    background: rgba(25, 59, 104, .06);
+    border-radius: 6px;
+    padding: 2px;
+}
+
+.w_pu_tab .w_putabitem {
+    font-size: 12px;
+    color: #242425;
+    width: 50%;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.w_pu_tab .w_putabitem.curr {
+    background: #FFFFFF;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /*日期*/
 .time-select {
 
 }
+
 .time-select input {
     width: 148px;
     height: 36px;
@@ -159,10 +257,11 @@
     background: url(../images/time.png) 152px center no-repeat;
     font-size: 12px;
     font-weight: bold;
-    color: #193b68;
+    color: #242425;
     background-color: rgba(25, 59, 104, .04);
     border: 0;
 }
+
 .time-select input::placeholder {
     font-weight: bold;
     color: rgba(36, 36, 37, .25);

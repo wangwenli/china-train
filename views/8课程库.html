@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程库</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../css/classroomSet.css">
+    <link rel="stylesheet" href="../css/select-common.css">
+    <link rel="stylesheet" href="../css/popup-common.css">
+    <link rel="stylesheet" href="../css/timetableStructure.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <style>
+
+    </style>
+</head>
+<body class="bggraybody">
+<div class="z-content">
+    <div class="term-tab clearfix mab16">
+        <div class="term-btn fr mal16 z-create-btn">
+            <img src="../images/icon-add.png" alt="">
+            新增
+        </div>
+    </div>
+    <div class="table-area ">
+        <table>
+            <thead>
+            <tr>
+                <th></th>
+                <th>名称</th>
+                <th>编号</th>
+                <th>类型</th>
+                <th>所属课程包</th>
+                <th>教员专业</th>
+                <th>教室类型</th>
+                <th>教员/学员</th>
+                <th>学时</th>
+                <th>计费学时</th>
+                <th>计费学时是否考试</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>01</td>
+                <td>通用应急设备操作</td>
+                <td>8815</td>
+                <td>固定舱</td>
+                <td>应急管理教员</td>
+                <td>客舱乘务员训练大纲</td>
+                <td>固定舱</td>
+                <td>1/15</td>
+                <td>87</td>
+                <td>9</td>
+                <td>是</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>通用应急设备操作</td>
+                <td>8815</td>
+                <td>固定舱</td>
+                <td>应急管理教员</td>
+                <td>客舱乘务员训练大纲</td>
+                <td>固定舱</td>
+                <td>1/15</td>
+                <td>87</td>
+                <td>9</td>
+                <td><span class="colred">否</span></td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>通用应急设备操作</td>
+                <td>8815</td>
+                <td>固定舱</td>
+                <td>应急管理教员</td>
+                <td>客舱乘务员训练大纲</td>
+                <td>固定舱</td>
+                <td>1/15</td>
+                <td>87</td>
+                <td>9</td>
+                <td><span class="colred">否</span></td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>通用应急设备操作</td>
+                <td>8815</td>
+                <td>固定舱</td>
+                <td>应急管理教员</td>
+                <td>客舱乘务员训练大纲</td>
+                <td>固定舱</td>
+                <td>1/15</td>
+                <td>87</td>
+                <td>9</td>
+                <td>是</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>通用应急设备操作</td>
+                <td>8815</td>
+                <td>固定舱</td>
+                <td>应急管理教员</td>
+                <td>客舱乘务员训练大纲</td>
+                <td>固定舱</td>
+                <td>1/15</td>
+                <td>87</td>
+                <td>9</td>
+                <td>是</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="page-list">
+            <div class="ht-page"></div>
+        </div>
+
+    </div>
+</div>
+<div class="marker" style="display: none"></div>
+<div class="popup pu-create" id="" style="display: none">
+    <div class="pu-title">
+        <h4>新增课程</h4>
+        <span class="pu-close"></span>
+    </div>
+    <div class="pu-con" style="overflow: visible;">
+        <div class="new-add biweekly clearfixs">
+            <div class="lab clearf">
+                <div class="clearfixs fl">
+                    <h3 class="w-pu_name">名称</h3>
+                    <div class="inputs" >
+                        <input type="text" class="name ckd mar24" placeholder="请输入课程名称"  style="width: 180px">
+                    </div>
+                </div>
+                <div class="clearfixs fl">
+                    <h3 class="w-pu_name">编号</h3>
+                    <div class="inputs" >
+                        <input type="text" class="name ckd" placeholder="请输入课程编号"  style="width: 180px">
+                    </div>
+                </div>
+            </div>
+            <div class="lab clearf">
+                <div class="clearfixs fl">
+                    <h3 class="w-pu_name">类型</h3>
+                    <div class="select-input mar24" data-title="" style="width: 180px;">
+                        <input type="text" class="name ckd" readonly placeholder="请选择"><i></i>
+                        <div class="select-dropdown ">
+                            <ul class="dropdown-list">
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfixs fl">
+                    <h3 class="w-pu_name">教员资质</h3>
+                    <div class="select-input" data-title="" style="width: 180px;">
+                        <input type="text" class="name ckd" readonly placeholder="请选择"><i></i>
+                        <div class="select-dropdown ">
+                            <ul class="dropdown-list">
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="lab clearf">
+                <div class="clearfixs fl">
+                    <h3 class="w-pu_name">教室类型</h3>
+                    <div class="select-input mar24" data-title="" style="width: 180px;">
+                        <input type="text" class="name ckd" readonly placeholder="请选择"><i></i>
+                        <div class="select-dropdown ">
+                            <ul class="dropdown-list">
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfixs fl">
+                    <div class="clearf">
+                        <h3 class="w-pu_name fl">教员/学员</h3>
+                        <div class="fr w_switchwrap">
+                            <span class="w_switchname">自定义</span>
+                            <span class="z-switch"></span>
+                        </div>
+                    </div>
+                    <div class="select-input" data-title="" style="width: 180px;">
+                        <input type="text" class="name ckd" readonly placeholder="请选择"><i></i>
+                        <div class="select-dropdown ">
+                            <ul class="dropdown-list">
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="lab clearf">
+                <div class="clearfixs fl">
+                    <h3 class="w-pu_name">教学设备</h3>
+                    <div class="inputs" >
+                        <input type="text" class="name ckd mar24" placeholder="请输入"  style="width: 180px">
+                    </div>
+                </div>
+                <div class="clearfixs fl">
+                    <h3 class="w-pu_name">教辅设备</h3>
+                    <div class="inputs" >
+                        <input type="text" class="name ckd" placeholder="请输入"  style="width: 180px">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="pu-btn">
+        <span class="btn-cancel">取消</span>
+        <span class="btn-confirm">确定</span>
+    </div>
+</div>
+</body>
+<script src="../templeteJs/jquery-3.3.1.min.js"></script>
+<script src="../templeteJs/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../templeteJs/jquery-page.js"></script>
+<script src="../js/timetableStructure.js"></script>
+<script src="../templeteJs/laydate.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    $(document).ready(function () {
+        // switch 开关
+        $(".popup").on('click',' .z-switch',function () {
+            $(this).toggleClass('cur');
+        });
+
+        laydate.render({
+            elem: "#Time",
+            position: "fixed",
+            range: true //或 range: '~' 来自定义分割字符
+        })
+
+        //分页
+        function pageChange(i) {
+            console.log("index is :" + i);
+            Pagination.Page($(".ht-page"), i, 1000, 10);
+        }
+
+        /*
+        * 初始化插件
+        * @param  object:翻页容器对象
+        * @param  function:回调函数
+        * */
+        Pagination.init($(".ht-page"), pageChange);
+        /*
+        * 首次调用
+        * @param  object:翻页容器对象
+        * @param  number:当前页
+        * @param  number:总条数
+        * @param  number:每页数据条数
+        * */
+        Pagination.Page($(".ht-page"), 0, 1000, 10);
+        //滚动条
+        $(".select-dropdown").mCustomScrollbar({
+            axis: "y"
+        });
+    })
+</script>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程包-新增</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../css/classroomSet.css">
+    <link rel="stylesheet" href="../css/select-common.css">
+    <link rel="stylesheet" href="../css/popup-common.css">
+    <link rel="stylesheet" href="../css/timetableStructure.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <style>
+
+    </style>
+</head>
+<body class="bggraybody">
+<div class="z-content ">
+    <div class="term-tab clearf mab24">
+        <div class="back">
+        </div>
+        <div class="txt">乘务员训练</div>
+    </div>
+    <div class="term-tab clearfix mab16">
+        <div class="term-search fl">
+            <img src="../images/icon-search.png" alt="">
+            <input type="text" placeholder="按课程名称检索">
+        </div>
+        <div class="term-btn fr mal16 z-create-btn">
+            <img src="../images/icon-add.png" alt="">
+            新增
+        </div>
+    </div>
+    <div class="table-area ">
+        <table>
+            <thead>
+            <tr>
+                <th></th>
+                <th>课程名称</th>
+                <th>课程编号</th>
+                <th>类型</th>
+                <th>教员/学员</th>
+                <th>学时</th>
+                <th>计费学时</th>
+                <th>是否考试</th>
+                <th>排序</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>01</td>
+                <td>职业化妆</td>
+                <td>2365</td>
+                <td>固定舱</td>
+                <td>1/15</td>
+                <td>87</td>
+                <td>9</td>
+                <td>是</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>职业化妆</td>
+                <td>2365</td>
+                <td>固定舱</td>
+                <td>1/15</td>
+                <td>87</td>
+                <td>9</td>
+                <td><span class="colred">否</span></td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>职业化妆</td>
+                <td>2365</td>
+                <td>固定舱</td>
+                <td>1/15</td>
+                <td>87</td>
+                <td>9</td>
+                <td><span class="colred">否</span></td>
+                <td>3</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="page-list">
+            <div class="ht-page"></div>
+        </div>
+
+    </div>
+</div>
+<div class="marker" style="display: none"></div>
+<div class="popup pu-create" id="" style="display: none">
+    <div class="pu-title">
+        <h4>新增课程</h4>
+        <span class="pu-close"></span>
+    </div>
+    <div class="pu-con" style="overflow: visible;">
+        <div class="new-add biweekly clearfixs">
+            <div class="lab clearf">
+                <div class="clearfixs fl">
+                    <h3 class="w-pu_name">姓名</h3>
+                    <div class="inputs" >
+                        <input type="text" class="name ckd mar24" placeholder="请输入姓名"  style="width: 180px">
+                    </div>
+                </div>
+                <div class="clearfixs fl">
+                    <h3 class="w-pu_name">编号</h3>
+                    <div class="inputs" >
+                        <input type="text" class="name ckd" placeholder="请输入编号"  style="width: 180px">
+                    </div>
+                </div>
+            </div>
+            <div class="lab clearf">
+                <div class="clearfixs fl">
+                    <h3 class="w-pu_name">类型</h3>
+                    <div class="select-input mar24" data-title="" style="width: 180px;">
+                        <input type="text" class="name ckd" readonly placeholder="请选择"><i></i>
+                        <div class="select-dropdown ">
+                            <ul class="dropdown-list">
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfixs fl">
+                    <h3 class="w-pu_name">教员/学员</h3>
+                    <div class="select-input" data-title="" style="width: 180px;">
+                        <input type="text" class="name ckd" readonly placeholder="请选择"><i></i>
+                        <div class="select-dropdown ">
+                            <ul class="dropdown-list">
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                                <li>行政型</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="lab clearf">
+                <div class="clearfixs fl mar24">
+                    <h3 class="w-pu_name">学时</h3>
+                    <div class="input-num fl" >
+                        <input type="number" class="name fl" placeholder="0">
+                        <p class="w_numr fl">
+                            <span class="w_numup"></span>
+                            <span class="w_numdown"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="clearfixs fl">
+                    <h3 class="w-pu_name">计费学时</h3>
+                    <div class="input-num fl" >
+                        <input type="number" class="name fl" placeholder="0" >
+                        <p class="w_numr fl">
+                            <span class="w_numup"></span>
+                            <span class="w_numdown"></span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="lab clearf">
+                <div class="clearfixs fl mar24" style="width: 180px">
+                    <h3 class="w-pu_name">是否考试</h3>
+                    <div class="w_pu_tab">
+                        <ul>
+                            <li class="w_putabitem fl">是</li>
+                            <li class="w_putabitem fl curr">否</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfixs fl">
+                    <h3 class="w-pu_name">排序</h3>
+                    <div class="inputs" >
+                        <input type="text" class="name ckd" placeholder="请输入课程编号"  style="width: 180px">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="pu-btn">
+        <span class="btn-cancel">取消</span>
+        <span class="btn-confirm">确定</span>
+    </div>
+</div>
+</body>
+<script src="../templeteJs/jquery-3.3.1.min.js"></script>
+<script src="../templeteJs/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../templeteJs/jquery-page.js"></script>
+<script src="../js/timetableStructure.js"></script>
+<script src="../templeteJs/laydate.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    $(document).ready(function () {
+        //是否考试
+        $(".pu-con").on("click",".w_putabitem",function(){
+            $(this).addClass("curr").siblings().removeClass("curr");
+        })
+
+
+        //num上下键
+        $(".pu-con").on("click",".w_numup",function(){
+            var num = parseInt($(this).parent().prev(".name").val())|| 0;
+            num+=1;
+            $(this).parent().prev(".name").val(num)
+        })
+        $(".pu-con").on("click",".w_numdown",function(){
+            var num = parseInt($(this).parent().prev(".name").val())|| 0;
+            num-=1;
+            $(this).parent().prev(".name").val(num)
+        })
+        //分页
+        function pageChange(i) {
+            console.log("index is :" + i);
+            Pagination.Page($(".ht-page"), i, 1000, 10);
+        }
+        /*
+        * 初始化插件
+        * @param  object:翻页容器对象
+        * @param  function:回调函数
+        * */
+        Pagination.init($(".ht-page"), pageChange);
+        /*
+        * 首次调用
+        * @param  object:翻页容器对象
+        * @param  number:当前页
+        * @param  number:总条数
+        * @param  number:每页数据条数
+        * */
+        Pagination.Page($(".ht-page"), 0, 1000, 10);
+        //滚动条
+        $(".select-dropdown").mCustomScrollbar({
+            axis: "y"
+        });
+    })
+</script>
+</html>
