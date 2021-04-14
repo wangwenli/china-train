@@ -15,7 +15,7 @@ a{text-decoration:none;color:#333}
 .overhidden{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 .alc{text-align: center}
 .no_click{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
-.graybg{background-color: #f4f4f6;}
+.graybg{background-color: #F6F7F9;}
 .curno{cursor: not-allowed}
 
 /*颜色公共*/
