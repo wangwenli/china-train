@@ -1,2 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
+
+/* 排课 */
+.l-select-area{position: fixed;top: 64px;right:0;bottom: 0;overflow-x: hidden;width: 288px;background-color: #fffc;}
+.l-select-content{height: 100%;}
+.l-sa-title{padding:24px;font-size: 24px;font-weight: 600;color: #242425;}
+.l-sa-center{height:calc(100vh - 83px);margin-top: 84px;}
