@@ -327,11 +327,13 @@ html #layuicss-laydate {
 }
 
 .layui-laydate-content td.laydate-selected {
-    background-color: rgb(255 82 82 / 25%)
+    background-color: #e57377;
+    color: #fff;
 }
 
 .laydate-selected:hover {
-    background-color: rgb(255 82 82 / 25%) !important
+    background-color: #e57377;
+    color: #fff;
 }
 
 .layui-laydate-content td:hover, .layui-laydate-list li:hover {
